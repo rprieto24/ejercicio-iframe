@@ -1,0 +1,46 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lbl-menu{
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.lbl-menu #spn1,#spn2,#spn3{ 
+    position: absolute;
+    content: '';
+    background:red;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+#spn2{
+    top: 11px;
+}
+#spn3{
+    top: 22px;
+}
+#botondemenu{
+    display: none;
+}
+#botondemenu:checked ~ .lbl-menu #spn1{
+    transform: rotate(140deg);
+    top: 10px;
+}
+#botondemenu:checked ~ .lbl-menu #spn2{
+    opacity: 0;    
+}
+#botondemenu:checked ~ .lbl-menu #spn3{
+    transform: rotate(-140deg);
+    top: 10px;
+}
+
+
+
+
